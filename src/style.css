@@ -2,24 +2,33 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9; */
 }
 
 /* Navigation bar styling */
 .navbar {
   background-color: yellow;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 10px 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (max-width:768px) {
+  .navbar{
+    flex-direction: column;
+  }
+}
+
 .navbar a {
-  text-decoration: none;  /* Remove underline */
+  text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 2.2rem;  /* Increase text size */
   padding: 8px 15px;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -30,85 +39,78 @@ body {
   color: yellow;
 }
 
-/* Hero Section */
-.hero-section {
+.hero-image{
+  width: 100%;
+  height: 80%;
   position: relative;
 }
 
-.hero-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.hero-para {
+.hero-para{
   position: absolute;
   color: white;
-  font-weight: bold;
-  font-size: 5rem;
+  font-weight: bolder;
+  font-size: 3rem;
   top: 40%;
-  right: 29%;
+  left: 20%;
 }
 
-@media screen and (max-width: 768px) {
-  .hero-para {
-    top: 60%;
+@media screen and (max-width:768px) {
+  .hero-para{
+    top:60%
   }
 }
 
-/* Paragraph */
-.para-class {
+.para-class{
   margin: 20px;
   font-size: 2rem;
-  text-align: center;
 }
 
-/* Card container styling */
-.card-grid {
-  display: flex;
-  justify-content: space-evenly; /* Ensure equal space between cards */
-  align-items: stretch; /* Make cards take up the same height */
-  gap: 2rem; /* Add space between the cards */
-  overflow-x: auto; /* Allow horizontal scrolling if content overflows */
-  white-space: nowrap; /* Prevent cards from wrapping to the next line */
-  padding: 0 2rem; /* Optional: Add padding to the left and right of the grid */
+ /* Card container styling */
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2rem;
 }
 
-/* Card styling */
-.card {
+@media screen and (max-width:768px) {
+  .card-grid{
+    flex-direction: column;
+  }
+}
+
+.card{
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(171, 163, 163);
   border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  gap: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1.2rem;
+  gap: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex: 0 0 auto;  /* Prevent the card from shrinking or growing */
-  width: 25%; /* Ensure each card takes up 25% of the available width */
 }
 
-.card-name {
-  font-size: 1.2rem;
+.card:hover{
+  transform: scale(1.05);;
+  box-shadow: 0 4px 8px rbga(0,0,0,0.2);
+  border: 1px solid blue;
 }
 
-.card-desc {
+.card-name{
+  color: var(--primary-color);
   font-size: 1rem;
-  color: #777;
-  word-wrap: break-word; /* Ensure long words break properly and fit within the container */
-  overflow: hidden; /* Prevent overflow of content */
-  text-overflow: ellipsis; /* Show ellipsis if the text is too long for the container */
-  max-height: 80px; /* Limit the height of the description area */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
 }
 
+.card-desc{
+  font-size: 0.875rem;
+  color: #777;
+}
 
 .card-one-button {
   display: block;
   text-align: center;
   margin: 20px auto 0;
-  padding: 12px 24px;
+  padding: 10px 20px;
   background-color: #007bff;
   color: white;
   text-decoration: none;
@@ -122,8 +124,8 @@ body {
 
 .card-one-image {
   width: 100%;
-  height: 500px;
-}
+  height: auto;
+
 
 
 
