@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Disaster_Management-Deploy-/static/css/main.fb2ee710.css",
+    "main.js": "/Disaster_Management-Deploy-/static/js/main.20f54e7b.js",
+    "index.html": "/Disaster_Management-Deploy-/index.html",
+    "main.fb2ee710.css.map": "/Disaster_Management-Deploy-/static/css/main.fb2ee710.css.map",
+    "main.20f54e7b.js.map": "/Disaster_Management-Deploy-/static/js/main.20f54e7b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb2ee710.css",
+    "static/js/main.20f54e7b.js"
+  ]
+}
